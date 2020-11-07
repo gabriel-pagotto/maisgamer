@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <%- include('components/head') %>
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+
+<body>
+  <div class='web'>
+    <%- include('components/header') %>
+    <div class="payload">
+      <div class="home">
+        <div class="page">
+          <a href="/article?q=<%- posts.pages[0].header.id %>" class="header-art">
+            <div class="category"><%- posts.pages[0].header.category.name %></div>
+            <h3 class="header-title"><%- posts.pages[0].header.title %></h3>
+            <div class="header-pic">
+              <img src="<%- posts.pages[0].header.coverImage %>" alt="<%-posts.pages[0].header.title%>">
+            </div>
+            <p class="header-subtitle"><%- posts.pages[0].header.subtitle %></p>
+            <div class="infos">
+              <span class="postedBy"><i
+                  class="fas fa-user-tag"><%- posts.pages[0].header.postedBy.name + ' ' + posts.pages[0].header.postedBy.surname %></i>
+              </span>
+              <time datetime="<%- posts.pages[0].header.addedAt %>"><i class="far fa-clock">
+                  <%- posts.pages[0].header.datePost %></i></time>
+            </div>
+          </a>
+          <% for (let i = 0; i < posts.pages[0].articles.length; i++) { 
+            const post = posts.pages[0].articles[i] %>
+            <!-- <% if (i === 3) { %>
+              <script>
+                const pageElement = document.querySelector('.page');
+                if (window.innerWidth < 1025) {
+                  const adsMobileScript1 = document.createElement('script');
+                  adsMobileScript1.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+                  adsMobileScript1.async = true;
+                  const adsMobile = document.createElement('div');
+                  adsMobile.appendChild(adsMobileScript1);
+                  adsMobile.className = 'ads-pc';
+                  adsMobile.innerHTML = `
+                      <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-fb+5v+4k-d3+7b"
+                      data-ad-client="ca-pub-1284323428666859" data-ad-slot="6148256205"></ins>
+                      `;
+                  const adsMobileScript2 = document.createElement('script');
+                  adsMobileScript2.src = '/static/javascript/googleAds.js';
+                  adsMobile.appendChild(adsMobileScript2);
+                  pageElement.appendChild(adsMobile);
+                };
+              </script>
+            <% } %> -->
+          <a class="rest-art" href="/article?q= <%- post.id %>">
+            <div class="rest-pic">
+              <img src="<%- post.coverImage %>" alt="<%- post.title %>">
+            </div>
+            <div class="infos">
+              <div class="category"><%- post.category.name %></div>
+              <h3 class="rest-title"><%- post.title %></h3>
+              <p class="rest-subtitle"><%- post.subtitle %></p>
+              <span class="postedBy"><i
+                  class="fas fa-user-tag"><%- post.postedBy.name + ' ' + post.postedBy.surname %></i></span>
+              <time datetime="<%- post.addedAt %>"><i class="far fa-clock">
+                  <%- post.addedAt %></i></time>
+            </div>
+          </a>
+          <% } %>
+          <div class="ad-h1">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- H-1 -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1284323428666859"
+              data-ad-slot="8676887631" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="loads" style="position: relative;">
+        {% include 'components/loader.html' %}
+      </div> -->
+    </div>
+    <%- include('components/footer') %>
+    <!-- <script src="{{ url_for('static', filename='javascript/index.js') }}"></script> -->
+</body>
+
+</html>

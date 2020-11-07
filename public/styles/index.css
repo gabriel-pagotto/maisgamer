@@ -1,0 +1,247 @@
+.home {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.home .page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.ads-pc {
+  margin-bottom: 20px;
+}
+
+.ads-mobile {
+  margin-bottom: 20px;
+}
+
+.home .page .header-art {
+  user-select: none;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #DFDFDF;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  animation: loadsItems 0.7s linear;
+  text-decoration: none;
+}
+
+.home .page .ad-h1 {
+  width: 100%;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.home .page .header-art:hover>.header-title {
+  text-decoration: underline;
+}
+
+.home .page .header-art:hover>.header-pic img {
+  opacity: 0.7;
+}
+
+.category {
+  color: #ffa31a;
+  text-transform: uppercase;
+  letter-spacing: 0.03rem;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.home .page .header-art .header-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #202020;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.home .page .header-art .header-title:hover {
+  opacity: 0.8;
+}
+
+.home .page .header-art .header-pic {
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20vw;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.home .page .header-art .header-pic img {
+  width: 100%;
+  transform: scale(1.05);
+  background: #FFFFFF;
+  transition: opacity 0.1s linear;
+}
+
+.home .page .header-art .header-subtitle {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #202020;
+}
+
+.home .page .header-art .header-subtitle a {
+  color: #202020;
+  text-decoration: none;
+}
+
+.home .page .header-art .infos .postedBy {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-decoration: none;
+  color: #9D9D9D;
+}
+
+.home .page .header-art .infos time {
+  color: #9D9D9D;
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.home .page .rest-art {
+  position: relative;
+  user-select: none;
+  width: 100%;
+  border-bottom: 1px solid #DFDFDF;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  height: max-content;
+  animation: loadsItems 0.9s linear;
+  text-decoration: none;
+}
+
+.home .page .rest-art:hover>.rest-pic img {
+  opacity: 0.7;
+}
+
+.home .page .rest-art:hover>.infos .rest-title {
+  text-decoration: underline;
+}
+
+.home .page .rest-art .rest-pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16vw;
+  height: 9vw;
+  min-width: 16vw;
+  max-width: 16vw;
+  max-height: 9vw;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.home .page .rest-art .rest-pic img {
+  width: 100%;
+  transform: scale(1.1);
+  transition: opacity 0.2s linear;
+}
+
+.home .page .rest-art .infos .rest-title {
+  display: block;
+  font-weight: 800;
+  color: #202020;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 23px;
+}
+
+.home .page .rest-art .infos .rest-title:hover {
+  opacity: 0.7;
+}
+
+.home .page .rest-art .infos .rest-subtitle {
+  display: block;
+  color: #202020;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.home .page .rest-art .infos .postedBy {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-decoration: none;
+  color: #9D9D9D;
+}
+
+.home .page .rest-art .infos time {
+  color: #9D9D9D;
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.loads {
+  user-select: none;
+  visibility: hidden;
+  display: flex;
+  width: max-content;
+  margin: 20px auto;
+  font-size: 18px;
+  color: #ffa31a;
+  text-shadow: 1px 1px 1px #EAEAEA;
+  font-weight: 700;
+  align-items: center;
+}
+
+.loads i {
+  color: #ffa31a;
+  font-size: 24px;
+  animation: Loading 0.7s infinite linear;
+  margin-right: 10px;
+}
+
+@media (max-width: 1025px) {
+  .home .page .header-art {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .home .page .header-art .header-title {
+    font-size: 23px;
+  }
+  .home .page .header-art .header-pic {
+    height: 50vw;
+    min-height: 0;
+  }
+  .home .page .rest-art {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .home .page .rest-art .rest-pic {
+    width: 37vw;
+    height: 22vw;
+    max-width: 200px;
+    max-height: 150px;
+    margin-right: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+  .home .page .rest-art .infos .rest-title {
+    font-size: 18px;
+    position: inherit;
+    max-width: 50%;
+    min-height: 85px;
+  }
+  .home .page .rest-art .infos .rest-subtitle {
+    font-size: 14px;
+  }
+  .home .page .ad-h1 {
+    width: 75%;
+  }
+}

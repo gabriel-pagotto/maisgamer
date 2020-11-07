@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <%- include('components/head') %>
+  <link rel="stylesheet" href="/styles/article.css">
+  <meta name="description" content="<%- article.subtitle %>" />
+  <meta property="og:description" content="<%- article.subtitle %>">
+  <meta property="og:image" content="<%- article.cover_image %>" />
+  <meta property="twitter:description" content="<%- article.subtitle %>" class="twitter-description" />
+  <meta property="twitter:image" content="<%- article.cover_image %>" />
+  <meta property="article:published_time" content="<%- article.addedAt %>">
+  <meta property="article:modified_time" content="<%- article.addedAt %>">
+</head>
+
+<body>
+  <div class='web'>
+    <%- include('components/header') %>
+    <!-- <div class="payload">
+      <div class="notice">
+        <div class="notice-header">
+          <h1 class="header-title"><%- article.title %></h1>
+          <p class="notice-subtitle"><%- article.subtitle %></p>
+          <span class="posted-by"><i class="fas fa-user-tag"> <%- user.name %> <%- user.surname %></i></span>
+          <div class="notice-options">
+            <time class="addedAt" datetime="<%- article.addedAt %>"><i class="far fa-clock">
+                notice.addedAt</i></time>
+            <div class="share">
+              <a id="facebook" href="" target="_blank" title="Compartilhar esta notícia no Facebook">
+                <i class="fab fa-facebook" id="facebook"></i>
+              </a>
+              <a id="twitter" href="" target="_blank" title="Compartilhar esta notícia no Twitter">
+                <i class="fab fa-twitter" id="twitter"></i>
+              </a>
+              <a id="whatsapp" href="" target="_blank" title="Compartilhar esta notícia no WhatsApp">
+                <i class="fab fa-whatsapp" id="whatsapp"></i>
+              </a>
+              <script src="{{ url_for('static', filename='javascript/noticeShare.js') }}"></script>
+            </div>
+          </div>
+        </div>
+        <div class="notice-body-container">
+          <div class="notice-body">
+            <% for (i = 0;i < articleContents.length; i++) { %>
+              <% let pBefore = false; %>
+              <% let pCounter = 0; %>
+              <% const content = articleContents[i]; %>
+              <% if (content.type === 'img') { %>
+                <img src="<%- content.content %>" alt="<%- article.title %>">
+              <% } %>
+              <% if (content.type === 'T') { %>
+                <h2><%- content.content %></h2>
+              <% } %>
+              <% if (content.type === 'TXT') { %>
+                <pre><%- content.content %></pre>
+              <% } %>
+              <% if (content.type === 'C') { %>
+                <cite><%- content.content %></cite>
+              <% } %>
+              <% if (content.type === 'P') { %>
+                <% if (pBefore && pCounter = 3) { %>
+                  <div class="adsInNotice">
+                    <!--<span class="continuePub">Continua após a publicidade</span>-->
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
+                      data-ad-format="fluid" data-ad-client="ca-pub-1284323428666859" data-ad-slot="6810601184"></ins>
+                    <script>
+                      (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                  </div>
+                <% } %>
+                <p><%- content.content %></p>
+              <% } %>
+              <% if (content.type === 'YTB') { %>
+                <iframe class="vYtb" src="https://www.youtube.com/embed/ <%- content.content %>" frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+              <% } %>
+              <% if (content.type === 'TWT') { %>
+                <div data-embed-type="tweet" class="tweet">
+                  <%- content.content %>
+                </div>
+              <% } %>
+            <% } %>            
+            
+            <% if (article.source_name === '' && article.source_name != null) { %>
+            <span class="source">
+              <i class="far fa-newspaper"></i> Créditos:
+              <a href="<%- article.source_url %>" target="_blank"><%- article.source_name %></a>
+            </span>
+            <% } %> 
+          </div>
+          <div class="ad1"></div>
+          <script>
+            const ad1 = document.querySelector('.ad1');
+            if (window.innerWidth > 1025) {
+              const googleAd1Script1 = document.createElement('script');
+              googleAd1Script1.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+              googleAd1Script1.async = true;
+              const googleAd1 = document.createElement('div');
+              googleAd1.appendChild(googleAd1Script1);
+              googleAd1.className = 'ads-pc';
+              googleAd1.innerHTML = `
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1284323428666859"
+                data-ad-slot="1024261343" data-ad-format="auto" data-full-width-responsive="true"></ins>
+              `;
+              const googleAd1Script2 = document.createElement('script');
+              googleAd1Script2.src = '/static/javascript/googleAds.js';
+              googleAd1.appendChild(googleAd1Script2);
+              ad1.appendChild(googleAd1);
+            };
+          </script>
+        </div>
+      </div>
+      <div class="more-notices">
+        <div class="googleAdsFooter">
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1284323428666859"
+            data-ad-slot="8676887631" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+        <span class="more-notices-title">Mais notícias</span>
+        <div class="notices-in-more">
+          <a href="{{ url_for('notice', q=news.id) }}" class="news-container-link">
+            <div class="news-container">
+              <div class="cover_image">
+                <img src="{{ news.cover_image }}" alt="{{ news.title }}">
+              </div>
+              <div class="title-content">
+                <span class="title"></span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div> -->
+    <%- include('components/footer') %>
+</body>
+
+</html>

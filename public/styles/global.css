@@ -1,0 +1,39 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  margin-top: 64px;
+  min-height: 100vh;
+  background: #EAEAEA;
+  overflow-x: hidden;
+}
+
+.web .payload {
+  min-height: 75vh;
+  background: #FFFFFF;
+  padding-top: 10px;
+}
+
+body, input, button, textarea, select, option, pre {
+  font-family: Khand;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+input {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input:focus {
+  border: 0 none;
+}
+
+@media (max-width: 1025px) {
+  body {
+    margin-top: 64px;
+  }
+}
