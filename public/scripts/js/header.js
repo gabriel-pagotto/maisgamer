@@ -1,23 +1,30 @@
 const header = {
   items: {
     open: function () {
-      const items = document.getElementsByClassName('ph-item')
+      const items = document.getElementsByClassName('ph-item');
 
-      let counter = 0.1;
+      let counter = 0.2;
 
       for (let i = 0; i < items.length; i ++) {
         const element = items[i];
-        console.log(element);
-        counter = counter + 0.1;
-        element.style.animation = `showHeaderItem ${counter.toString()}s linear`;
-        element.style.animation = `showHeaderItem ${counter.toString()}s linear`;
+        counter = counter + 0.06;
         element.style.animation = `showHeaderItem ${counter.toString()}s linear`;
       }
       itemsController.itemsContainer.style.left = '0';
       itemsController.itemsContainer.style.opacity = '1';
     },
     close: function () {
+      const items = document.getElementsByClassName('ph-item');
 
+      let counter = 0.2;
+      
+      for (let i = 0; i < items.length; i ++) {
+        const element = items[i];
+        counter = counter + 0.06;
+        element.style.animation = `hideHeaderItem ${counter.toString()}s linear reverse`;
+      }
+      itemsController.itemsContainer.style.left = '-100vw';
+      itemsController.itemsContainer.style.opacity = '0';
     },
   },
   search: {
@@ -59,10 +66,12 @@ const header = {
 
 const itemsController = {
   openItems: document.querySelector('.items-open'),
+  itemsHeader: document.querySelector('.ph-header'),
   itemsContainer: document.querySelector('.ph-items'),
 };
 
 itemsController.openItems.addEventListener('click', header.items.open);
+itemsController.itemsHeader.addEventListener('click', header.items.close);
 
 const searchController = {
   searchInput: document.querySelector('.ph-search-input'),

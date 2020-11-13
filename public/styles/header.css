@@ -41,6 +41,11 @@ header .header-body .header-logo img {
 header .header-body .ph-items {
   max-width: min-content;
   overflow: hidden;
+  opacity: 1;
+}
+
+header .header-body .ph-header {
+  display: none;
 }
 
 header .header-body .ph-items ul {
@@ -113,7 +118,7 @@ header .header-body .header-search {
 
 @media (max-width: 1025px) {
   header .header-body {
-    height: 50px;
+    height: 55px;
   }
   header .header-body .items-open {
     display: flex;
@@ -144,6 +149,20 @@ header .header-body .header-search {
     opacity: 0;
     transition: left 0.2s linear, opacity 0.2s linear;
   }
+  header .header-body .ph-items .ph-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 55px;
+    justify-content: end;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 23px;
+  }  
+  header .header-body .ph-items .ph-header i {
+    margin: 10px 15px;
+    margin-left: auto;
+  }
   header .header-body .ph-items ul {
     display: flex;
     flex-direction: column;
@@ -161,7 +180,8 @@ header .header-body .header-search {
   .header-body .ph-items ul li .ph-item {
     font-size: 16px;
     text-align: left;
-    margin-left: 40px;
+    margin-left: 30px;
+    position: relative;
   }
   header .header-body .header-search {
     position: fixed;
