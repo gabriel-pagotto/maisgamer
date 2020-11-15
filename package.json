@@ -4,8 +4,9 @@
   "main": "app.js",
   "license": "MIT",
   "scripts": {
-    "prestart": "yarn init -y && rm -rf node_modules yarn.lock && yarn",
-    "start": "node app.js",
+    "prestart": "rm -rf node_modules yarn.lock yarn-error.log && yarn",
+    "load": "node app.js",
+    "start": "yarn load",
     "dev": "nodemon app.js"
   },
   "dependencies": {
