@@ -4,8 +4,8 @@
   "main": "app.js",
   "license": "MIT",
   "scripts": {
-    "prestart": "rm -rf node_modules yarn.lock yarn-error.log && yarn",
-    "start": "sudo node app.js",
+    "prestart": "yarn",
+    "start": "node app.js",
     "dev": "nodemon app.js"
   },
   "dependencies": {
