@@ -1,12 +1,11 @@
 {
-  "name": "mais-gamer-node",
+  "name": "mais-gamer",
   "version": "1.0.0",
   "main": "app.js",
   "license": "MIT",
   "scripts": {
     "prestart": "rm -rf node_modules yarn.lock yarn-error.log && yarn",
-    "load": "node app.js",
-    "start": "yarn load",
+    "start": "sudo node app.js",
     "dev": "nodemon app.js"
   },
   "dependencies": {
