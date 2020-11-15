@@ -3,7 +3,6 @@ const dotenv = require('dotenv');
 const path = require('path');
 const app = express();
 const router = express.Router();
-const port = 3000;
 
 require('./src/database');
 
@@ -18,6 +17,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/public')));
 
 require('./src/routes')(app);
+
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
