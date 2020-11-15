@@ -4,6 +4,7 @@
   "main": "app.js",
   "license": "MIT",
   "scripts": {
+    "prestart": "yarn",
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
