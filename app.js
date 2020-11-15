@@ -1,19 +1,20 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const path = require('path');
 const app = express();
 const router = express.Router();
 
-require('./src/database');
-
 dotenv.config();
+
+require('./src/database');
 
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
 
 app.use(router);
-app.use(express.json());       // to support JSON-encoded bodies
-app.use(express.urlencoded({ extended: true })); 
+app.use(bodyParser.json());       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(express.static(path.join(__dirname, '/public')));
 
 require('./src/routes')(app);
