@@ -4,7 +4,7 @@
   "main": "app.js",
   "license": "MIT",
   "scripts": {
-    "prestart": "npm run clean && rm -rf node_modules package.json yarn.lock && npm install",
+    "prestart": "npm run clean && rm -rf node_modules yarn.lock && npm install",
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
