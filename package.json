@@ -4,7 +4,7 @@
   "main": "app.js",
   "license": "MIT",
   "scripts": {
-    "prestart": "npm cache clean --force; npm install --no-optional",
+    "prestart": "npm cache clean --force; rm -rf node_modules package-lock.json; npm install --no-optional",
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
