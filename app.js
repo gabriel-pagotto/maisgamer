@@ -15,7 +15,7 @@ app.set('views', './src/views');
 app.use(router);
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded({ extended: true })); 
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/global')));
 
 require('./src/routes')(app);
 
