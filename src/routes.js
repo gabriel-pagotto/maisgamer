@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const routes = require('./routes/');
-const ArticleController = require('./controllers/ArticleController');
-const UserController = require('./controllers/UserController');
+const ArticleController = require('./controllers/articleController.js');
+const UserController = require('./controllers/UserController.js');
 
 //render routes//
 router.get('/', routes.index);
