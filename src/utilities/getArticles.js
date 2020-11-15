@@ -45,7 +45,6 @@ module.exports = async function (categoryId = null) {
       }
     }
 
-    console.log(obj.addedAt);
     const post = {
       id: obj.id,
       title: obj.title,

@@ -28,9 +28,15 @@
     <div class="header-search">
       <form action="" class="ph-search">
         <input placeholder="Buscar" type="search" class="ph-search-input">
+        <div class="search-closer"><i class="fas fa-times"></i></div>
       </form>
-      <div class="ph-search-results"></div>
+      <div class="ph-search-results">
+        <div class="search-results-header">Escreva para buscar</div>
+        <div class="search-results-loader"><%- include('./loader.ejs') %></div>
+        <div class="results"></div>
+      </div>
     </div>
   </div>
+  <script src="/scripts/js/search.js"></script>
   <script src="/scripts/js/header.js"></script>
 </header>

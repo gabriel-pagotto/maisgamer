@@ -103,7 +103,7 @@ module.exports = {
             association: 'postContents'
           },
         ]
-      });
+    });
 
     return res.render('pages/article', {
       title: article.title,

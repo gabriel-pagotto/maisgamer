@@ -105,15 +105,77 @@ header .header-body .header-search {
   width: 350px;
 }
 
+.header-body .header-search .ph-search .search-closer {
+  display: none;
+}
+
 .header-body .header-search .ph-search-results {
   position: fixed;
   top: 64px;
   right: -100vw;
   height: calc(100% - 64px);
-  width: 360px;
-  background: red;
+  width: 385px;
   z-index: 2;
   transition: all 0.3s linear;
+  background: #000000;
+}
+
+.header-search .ph-search-results .search-results-header {
+  background: #000000;
+  color: #FFFFFF;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  padding: 5px 0;
+  border-bottom: 2px solid #1A1A1A;
+  font-size: 18px;
+}
+
+.header-search .ph-search-results .search-results-loader {
+  margin-top: 20px;
+  display: none;
+}
+
+.header-search .ph-search-results .results {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  max-height: 94%;
+}
+
+.ph-search-results .results .result-container {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #1A1A1A;
+  margin: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+}
+
+.ph-search-results .results .result-container .result-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  min-width: 130px;
+  height: 80px;
+  min-height: 80px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.results .result-container .result-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.results .result-container .result-title {
+  color: #FFFFFF;
+  text-shadow: 1px 1px 1px rgba(16, 16, 16, .8);
+  display: -webkit-box;
 }
 
 @media (max-width: 1025px) {
@@ -184,11 +246,41 @@ header .header-body .header-search {
     position: relative;
   }
   header .header-body .header-search {
+    opacity: 0;
     position: fixed;
     top: 0;
     right: -100vw;
     box-shadow: none;
     width: 100%;
     height: 100%;
+    transition: right 0.2s linear, opacity 0.2s linear;
+    margin: 0;
+    background: #000000;
+  }
+  .header-body .header-search .ph-search {
+    display: flex;
+    flex-direction: row;
+  }
+  .header-body .header-search .ph-search .ph-search-input {
+    margin: 10px;
+    font-size: 22px;
+    width: 80%;
+  }
+  .header-body .header-search .ph-search .ph-search-input:focus {
+    width: 80%;
+  }
+  .header-body .header-search .ph-search-results {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .header-body .header-search .ph-search .search-closer {
+    display: flex;
+    color: #FFFFFF;
+    font-size: 23px;
+    margin: 15px 15px;
+    margin-left: auto;
   }
 }
