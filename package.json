@@ -6,7 +6,7 @@
   "scripts": {
     "prestart": "npm i && yarn sequelize db:migrate",
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "load": "nodemon app.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -16,7 +16,7 @@
     "moment": "^2.29.1",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.6",
-    "sequelize": "5.3"
+    "sequelize": "^6.3.5"
   },
   "devDependencies": {
     "sequelize-cli": "^6.2.0"
