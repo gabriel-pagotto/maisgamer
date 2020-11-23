@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\gabri\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add sequelize 3.30.3
+  C:\Program Files\nodejs\node.exe C:\Users\gabri\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add sequelize=4.3
 
 PATH: 
-  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\gabri\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\gabri\AppData\Local\Programs\Python\Python39\;C:\Users\gabri\AppData\Local\Microsoft\WindowsApps;C:\Users\gabri\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\gabri\AppData\Roaming\npm;C:\flutter\bin\dart;C:\flutter\bin\flutter;
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\gabri\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\gabri\AppData\Local\Programs\Python\Python39\;C:\Users\gabri\AppData\Local\Microsoft\WindowsApps;C:\Users\gabri\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\gabri\AppData\Roaming\npm;C:\src\flutter\bin
 
 Yarn version: 
   1.22.10
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/3.30.3: Not found
+  Error: https://registry.yarnpkg.com/sequelize=4.3: Not found
       at Request.params.callback [as _callback] (C:\Users\gabri\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66988:18)
       at Request.self.callback (C:\Users\gabri\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140662:22)
       at Request.emit (events.js:315:20)
@@ -35,7 +35,7 @@ npm manifest:
     "scripts": {
       "prestart": "npm i && yarn sequelize db:migrate",
       "start": "node app.js",
-      "dev": "nodemon app.js"
+      "load": "nodemon app.js"
     },
     "dependencies": {
       "body-parser": "^1.19.0",
