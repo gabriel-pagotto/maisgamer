@@ -4,7 +4,7 @@
   "main": "app.js",
   "license": "MIT",
   "scripts": {
-    "prestart": "npm i && yarn sequelize db:migrate",
+    "prestart": "yarn && yarn sequelize db:migrate",
     "start": "node app.js",
     "load": "nodemon app.js"
   },
@@ -16,7 +16,7 @@
     "moment": "^2.29.1",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.6",
-    "sequelize": "4.3"
+    "sequelize": "^6.3.5"
   },
   "devDependencies": {
     "sequelize-cli": "^6.2.0"
