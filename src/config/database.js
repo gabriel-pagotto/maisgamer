@@ -11,7 +11,7 @@ module.exports = {
   database: process.env.DATABASE_NAME,
   define: {
     timestamps: false,
-    underscored: false,
+    underscored: true,
   },
   // dialectOptions: {
   //   ssl: {
