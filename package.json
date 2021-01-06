@@ -4,7 +4,7 @@
   "main": "app.js",
   "license": "MIT",
   "scripts": {
-    "prestart": "npm i",
+    "prestart": "npm i; yarn sequelize db:migrate",
     "start": "node app.js",
     "load": "nodemon app.js"
   },
