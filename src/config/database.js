@@ -11,11 +11,11 @@ module.exports = {
   database: process.env.DATABASE_NAME,
   define: {
     timestamps: false,
-    underscored: true,
+    underscored: false,
   },
   dialectOptions: {
     ssl: {
-      required: true,
+      required: false,
       rejectUnauthorized: false,
     },
   },
