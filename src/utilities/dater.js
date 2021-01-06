@@ -28,7 +28,6 @@ module.exports = {
   difference: function (past) {
     const now = moment(this.utcBr());
     const duration = moment.duration(now.diff(past));
-
     const days = (
       duration.days() > 0
       && duration.days() <= 3
@@ -78,6 +77,7 @@ module.exports = {
     }
 
     const pastDate = new Date(past);
+
 
     const finalPastDate = `${pastDate.getDate()} de ${this.getMonthName(pastDate.getMonth())} de ${pastDate.getFullYear()}`;
 

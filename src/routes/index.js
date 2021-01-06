@@ -104,7 +104,7 @@ module.exports = {
           },
         ]
     });
-
+    
     return res.render('pages/article', {
       title: article.title,
       datePost: dater.difference(article.createdAt),
