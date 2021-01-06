@@ -13,10 +13,4 @@ module.exports = {
     timestamps: false,
     underscored: true,
   },
-  // dialectOptions: {
-  //   ssl: {
-  //     required: false,
-  //     rejectUnauthorized: false,
-  //   },
-  // },
 }
