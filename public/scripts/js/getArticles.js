@@ -16,6 +16,7 @@ window.addEventListener('scroll', () => {
       page = page + 1;
       const xhr = new XMLHttpRequest;
       xhr.open('get', window.location + `?page=${page}`);
+      console.log(window.location);
       xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
@@ -27,7 +28,6 @@ window.addEventListener('scroll', () => {
             home.appendChild(pageElement);
             const headerArt = document.createElement('a');
             let category = '';
-            console.log(data);
             if (data.header.category !== null) category = `<div class="category">${data.header.category.name}</div>`;
             headerArt.className = 'header-art';
             headerArt.href = '/article?q=' + data.header.id;

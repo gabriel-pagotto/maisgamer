@@ -6,7 +6,7 @@ module.exports = {
   index: async function (req, res) {
     const pageNumber = req.query.page;
 
-    posts = await getArticles(pageNumber);
+    posts = await getArticles();
 
     if (pageNumber !== undefined) {
       return res.json({
@@ -104,7 +104,7 @@ module.exports = {
           },
         ]
     });
-    
+
     return res.render('pages/article', {
       title: article.title,
       datePost: dater.difference(article.createdAt),
