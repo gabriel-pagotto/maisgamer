@@ -17,12 +17,6 @@ app.use(router);
 app.use(bodyParser.json());       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(express.static(path.join(__dirname, '/public')));
-app.use((request, response, next) => {
-  const inProduction = process.env.ON_PRODUCTION === 'true';
-  const isHttps = (request.headers["x-forwarded-proto"] || "").endsWith("http");
-
-  isHttps && inProduction ? response.redirect(`https://${request.hostname}${request.url}`) : next();
-});
 
 require('./src/routes')(app);
 
