@@ -19,8 +19,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/public')));
 app.use((request, response, next) => {
   const inProduction = process.env.ON_PRODUCTION === 'true';
-  const isHttps = (req.headers["x-forwarded-proto"] || "").endsWith("http");
-  
+  const isHttps = (request.headers["x-forwarded-proto"] || "").endsWith("http");
+
   isHttps && inProduction ? response.redirect(`https://${request.hostname}${request.url}`) : next();
 });
 
