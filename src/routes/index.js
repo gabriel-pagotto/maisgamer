@@ -6,7 +6,7 @@ module.exports = {
   index: async function (req, res) {
     const pageNumber = req.query.page;
 
-    posts = await getArticles();
+    posts = await getArticles(null);
 
     if (pageNumber !== undefined) {
       return res.json({
