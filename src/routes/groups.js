@@ -1,5 +1,4 @@
 const Groups = require('../models/Groups');
-const puppeteer = require('puppeteer');
 
 module.exports = {
   sendGroup: async function(request, response) {
@@ -26,30 +25,6 @@ module.exports = {
     
     const group = await Groups.create(data); 
     return response.json(group);
-  },
-  getWhatsAppGroupInformations: async function(request, response) {
-    const { link } = request.query;
-    
-    const getGroupInformations = {
-      whatsapp: async function(link) {
-        const browser = await puppeteer.launch();
-        const page = await browser.newPage();
-        await page.goto(link);
-
-        const name = await page.$eval('._2yzk', el => el.innerText);
-        let icon = await page.$eval('._2z9j', el =>  el.style.backgroundImage);
-
-        icon = icon.split("\"");
-        icon = icon[1];
-
-        await browser.close();
-        return { name, icon };
-      },
-    }
-
-    const { name, icon } = await getGroupInformations.whatsapp(link);
-
-    return response.json({ link, name, icon });
   },
   groups: async function(request, response) {
     return response.render();
