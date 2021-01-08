@@ -86,8 +86,7 @@ module.exports = {
   isWeek: function (past) {
     const now = moment(this.utcBr());
     const duration = moment.duration(now.diff(past));
-
-    const isWeek = duration.weeks <= 1;
+    const isWeek = duration.weeks() <= 1 && duration.months() === 0 && duration.years() === 0;
 
     return isWeek;
   },

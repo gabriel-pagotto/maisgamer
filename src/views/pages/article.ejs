@@ -122,17 +122,17 @@
             (adsbygoogle = window.adsbygoogle || []).push({});
           </script>
         </div>
-        <% if (moreArticles !== null) { %>
-        <span class="more-notices-title">Mais notícias</span>
+        <% if (moreArticles !== null && moreArticles.length !== 0) { %>
+        <span class="more-notices-title">Ler mais</span>
         <div class="notices-in-more">
           <% moreArticles.map((article) => { %>
             <a href="/article?q=<%- article.id %>" class="news-container-link">
               <div class="news-container">
                 <div class="cover_image">
-                  <img src="<%- article.coverImage %>" alt="<%- article.title %>">
+                  <img src="<%- article.cover_image %>" alt="<%- article.title %>">
                 </div>
                 <div class="title-content">
-                  <span class="title"></span>
+                  <span class="title"><%- article.title %></span>
                 </div>
               </div>
             </a>
