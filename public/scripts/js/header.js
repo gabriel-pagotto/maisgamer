@@ -1,4 +1,16 @@
 const header = {
+  controllers: {
+    positionOnArticle: function () {
+      const isMinWidth = window.innerWidth < 1025;
+      const isArticle = window.location.pathname === '/article';
+      const scrollCounter = document.documentElement.scrollTop > 50;
+      const header = document.querySelector('header');
+    
+      if (scrollCounter === true && isArticle && isMinWidth) return header.style.top = '-80px';
+    
+      return header.style.top = '0';
+    },
+  },
   items: {
     open: function () {
       const items = document.getElementsByClassName('ph-item');
@@ -98,3 +110,4 @@ searchController.searchCloser.addEventListener('click', header.search.close);
 searchController.searchInput.addEventListener('input', header.search.showResults);
 window.addEventListener('resize', header.items.showItems);
 window.addEventListener('resize', header.search.close);
+window.addEventListener('scroll', header.controllers.positionOnArticle);
