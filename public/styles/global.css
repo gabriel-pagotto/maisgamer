@@ -3,16 +3,29 @@
   padding: 0px;
 }
 
+:root {
+  --primary: #ffa31a;
+  --secondary: #111111;
+  --tertiary: #FFFFFF;
+  --quaternary: #EFEFEF;
+  --quintenary: #000000;
+  --sextenary: #9D9D9D;
+
+  --facebook: #36589F;
+  --twitter: #1A91DA;
+  --whatsapp: #25CC63;
+}
+
 body {
   margin-top: 64px;
   min-height: 100vh;
-  background: #FFFFFF;
+  background: var(--tertiary);
   overflow-x: hidden;
 }
 
 .web .payload {
   min-height: 75vh;
-  background: #FFFFFF;
+  background: var(--tertiary);
   padding-top: 10px;
 }
 

@@ -11,5 +11,5 @@
   height: 30px;
   border-radius: 50%;
   animation: GlobalLoader 0.2s linear infinite;
-  border-right: 3px solid #ffa31a;
+  border-right: 3px solid var(--primary);
 }

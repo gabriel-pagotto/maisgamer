@@ -22,7 +22,7 @@
   user-select: none;
   position: relative;
   width: 100%;
-  border-bottom: 1px solid #DFDFDF;
+  border-bottom: 1px solid var(--quaternary);
   padding-bottom: 20px;
   margin-bottom: 20px;
   animation: loadsItems 0.7s linear;
@@ -44,7 +44,7 @@
 }
 
 .category {
-  color: #ffa31a;
+  color: var(--primary);
   text-transform: uppercase;
   letter-spacing: 0.03rem;
   font-size: 12px;
@@ -57,7 +57,7 @@
 .home .page .header-art .header-title {
   font-size: 28px;
   font-weight: 800;
-  color: #202020;
+  color: var(--secondary);
   text-transform: capitalize;
   text-decoration: none;
 }
@@ -80,7 +80,7 @@
 .home .page .header-art .header-pic img {
   width: 100%;
   transform: scale(1.05);
-  background: #FFFFFF;
+  background: var(--tertiary);
   transition: opacity 0.1s linear;
 }
 
@@ -88,11 +88,11 @@
   display: block;
   font-weight: 500;
   margin-bottom: 10px;
-  color: #202020;
+  color: var(--secondary);
 }
 
 .home .page .header-art .header-subtitle a {
-  color: #202020;
+  color: var(--secondary);
   text-decoration: none;
 }
 
@@ -101,11 +101,11 @@
   text-transform: uppercase;
   font-size: 12px;
   text-decoration: none;
-  color: #9D9D9D;
+  color: var(--sextenary);
 }
 
 .home .page .header-art .infos time {
-  color: #9D9D9D;
+  color: var(--sextenary);
   margin-left: 10px;
   font-size: 12px;
 }
@@ -114,7 +114,7 @@
   position: relative;
   user-select: none;
   width: 100%;
-  border-bottom: 1px solid #DFDFDF;
+  border-bottom: 1px solid var(--quaternary);
   padding-bottom: 20px;
   margin-bottom: 20px;
   display: flex;
@@ -153,7 +153,7 @@
 .home .page .rest-art .infos .rest-title {
   display: block;
   font-weight: 800;
-  color: #202020;
+  color: var(--secondary);
   text-decoration: none;
   margin-bottom: 10px;
   font-size: 23px;
@@ -165,7 +165,7 @@
 
 .home .page .rest-art .infos .rest-subtitle {
   display: block;
-  color: #202020;
+  color: var(--secondary);
   text-decoration: none;
   font-size: 14px;
   margin-bottom: 10px;
@@ -176,11 +176,11 @@
   text-transform: uppercase;
   font-size: 12px;
   text-decoration: none;
-  color: #9D9D9D;
+  color: var(--sextenary);
 }
 
 .home .page .rest-art .infos time {
-  color: #9D9D9D;
+  color: var(--sextenary);
   margin-left: 10px;
   font-size: 12px;
 }
@@ -192,14 +192,14 @@
   width: max-content;
   margin: 20px auto;
   font-size: 18px;
-  color: #ffa31a;
-  text-shadow: 1px 1px 1px #EAEAEA;
+  color: var(--primary);
+  text-shadow: 1px 1px 1px var(--quaternary);
   font-weight: 700;
   align-items: center;
 }
 
 .loads i {
-  color: #ffa31a;
+  color: var(--primary);
   font-size: 24px;
   animation: Loading 0.7s infinite linear;
   margin-right: 10px;
