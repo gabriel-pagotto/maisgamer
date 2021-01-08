@@ -44,7 +44,6 @@ const header = {
   },
   search: {
     open: function () {
-      console.log('fock');
       if (window.innerWidth < 1025) {
         searchController.headerSearch.style.right = '0';
         searchController.headerSearch.style.opacity = '1';
