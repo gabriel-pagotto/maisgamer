@@ -1,7 +1,6 @@
 const Post = require('../models/Post');
 const getArticles = require('../utilities/getArticles');
 const dater = require('../utilities/dater');
-const { max } = require('../models/Post');
 
 module.exports = {
   index: async function (req, res) {

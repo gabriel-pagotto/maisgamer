@@ -17,6 +17,9 @@ module.exports = async function (categoryId = null) {
     });
   } else {
     posts = await Post.findAll({
+      order: [
+        'created_at',
+      ],
       include: [{
         association: 'user'
       },
