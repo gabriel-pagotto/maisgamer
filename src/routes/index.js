@@ -146,6 +146,11 @@ module.exports = {
       });
     }
 
+    Post.update(
+      {views: article.views + 1},
+      {where: {id: articleId}}
+    )
+
     return res.render('pages/article', {
       title: article.title,
       datePost: dater.difference(article.createdAt),
