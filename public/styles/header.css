@@ -47,6 +47,7 @@ header .header-body .ph-items {
 
 header .header-body .ph-header {
   display: none;
+  height: max-content;
 }
 
 header .header-body .ph-items ul {
@@ -55,12 +56,14 @@ header .header-body .ph-items ul {
   align-items: center;
   overflow: hidden;
   width: min-content;
+  height: 35px;
 }
 
 header .header-body .ph-items ul li {
   list-style: none;
   margin: 0 10px;
   width: max-content;
+  height: max-content;
 }
 
 .header-body .ph-items ul li .ph-item {
@@ -72,13 +75,26 @@ header .header-body .ph-items ul li {
 }
 
 .header-body .ph-items ul li .ph-item-add {
-  color: var(--tertiary);
+  color: var(--primary);
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
-  background-color: var(--primary);
-  padding: 25px 35px;
+  border: 2px solid var(--primary);
+  padding: 5px 15px;
+  border-radius: 10px;
+  align-self: center;
+  justify-self: center;
+  font-weight: 600;
+  margin: auto;
+}
+
+.header-body .ph-items ul li .ph-item-add:hover {
+  opacity: 0.8;
+}
+
+.header-body .ph-items ul li .ph-item-add:active {
+  opacity: 0.6;
 }
 
 .header-body .ph-items ul li .ph-item:hover {
@@ -99,7 +115,7 @@ header .header-body .header-search {
   border: 1px solid var(--tertiary);
   border-radius: 3px;
   padding: 5px;
-  background: #363636;
+  background: var(--secondary);
   font-size: 15px;
   z-index: 8;
   justify-content: center;
@@ -112,7 +128,7 @@ header .header-body .header-search {
   background: var(--tertiary);
   outline: none;
   color: var(--secondary);
-  border: 1px solid #363636;
+  border: 1px solid var(--tertiary);
   width: 350px;
 }
 
@@ -185,7 +201,7 @@ header .header-body .header-search {
 
 .results .result-container .result-title {
   color: var(--tertiary);
-  text-shadow: 1px 1px 1px rgba(16, 16, 16, .8);
+  text-shadow: 1px 1px 1px var(--secondary);
   display: -webkit-box;
 }
 
@@ -241,20 +257,26 @@ header .header-body .header-search {
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    width: min-content;
+    width: 100%;
     margin: 0 0;
+    height: max-content;
+    justify-content: center;
   }
   header .header-body .ph-items ul li {
     margin: 10px 0;
     display: flex;
     justify-content: left;
     margin-right: auto;
+    width: 100%;
   }
   .header-body .ph-items ul li .ph-item {
     font-size: 16px;
     text-align: left;
     margin-left: 30px;
     position: relative;
+  }
+  .header-body .ph-items ul li .ph-item-add {
+    margin-top: 60px;
   }
   header .header-body .header-search {
     opacity: 0;

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="stylesheet" href="/styles/article.css">
+  <meta name="description" content="<%- article.subtitle %>" />
+  <meta property="og:description" content="<%- article.subtitle %>">
+  <meta property="og:image" content="<%- article.cover_image %>" />
+  <meta property="twitter:description" content="<%- article.subtitle %>" class="twitter-description" />
+  <meta property="twitter:image" content="<%- article.cover_image %>" />
+  <meta property="article:published_time" content="<%- article.created_at %>">
+  <meta property="article:modified_time" content="<%- article.created_at %>">
+  <%- include('../components/head.ejs') %>
+</head>
+
+<body>
+  <div class='web'>
+    <%- include('../components/header') %>
+    <div class="payload">
+      
+    </div>
+    <%- include('../components/footer') %>
+</body>
+
+</html>
