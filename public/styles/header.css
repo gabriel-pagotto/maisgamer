@@ -70,7 +70,7 @@ header .header-body .ph-items ul li {
   color: var(--tertiary);
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: var(--wStrong);
   font-size: 12px;
 }
 
@@ -78,14 +78,13 @@ header .header-body .ph-items ul li {
   color: var(--primary);
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: var(--wStrong);
   font-size: 12px;
   border: 2px solid var(--primary);
   padding: 5px 15px;
   border-radius: 10px;
   align-self: center;
   justify-self: center;
-  font-weight: 600;
   margin: auto;
 }
 

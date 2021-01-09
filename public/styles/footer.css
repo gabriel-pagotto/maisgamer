@@ -126,7 +126,7 @@
 .sign-social-media {
   color: var(--sextenary);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: var(--wStrong);
   text-transform: uppercase;
   margin: 0 30px 0 20px;
 }

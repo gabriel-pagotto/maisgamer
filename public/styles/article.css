@@ -61,7 +61,7 @@
   margin: 10px auto;
   text-align: left;
   font-size: 1.1em;
-  font-weight: 400;
+  font-weight: var(--wLow);
   margin: 20px auto;
   color: var(--secondary);
   line-height: 1.5;
@@ -75,7 +75,7 @@
 .web .payload .notice p {
   font-size: 1.1em;
   margin: 0 auto 20px auto;
-  font-weight: 400;
+  font-weight: var(--wLow);
   color: var(--secondary);
   line-height: 1.5;
 }
@@ -84,12 +84,11 @@
   display: block;
   margin: 0 auto 20px auto;
   width: 90%;
-  font-weight: 400;
+  font-weight: var(--wVeryLow);
   border-left: 3px solid var(--quaternary);
   padding: 0px 10px;
   font-size: 1.03em;
   margin: 0 auto 20px auto;
-  font-weight: 400;
   color: var(--secondary);
   line-height: 1.5;
 }
@@ -100,7 +99,7 @@
   margin: 40px auto 20px auto;
   font-size: 1.5em;
   text-align: left;
-  font-weight: 700;
+  font-weight: var(--wStrong);
   color: var(--secondary);
   text-decoration: none;
   clear: both;
@@ -142,7 +141,7 @@
   margin: 40px auto 20px auto;
   font-size: 2.3em;
   text-align: left;
-  font-weight: 700;
+  font-weight: var(--wStrong);
   color: var(--secondary);
   text-decoration: none;
   clear: both;
@@ -152,30 +151,17 @@
 .payload .notice .notice-header .notice-subtitle {
   position: relative;
   margin: 20px auto;
-  font-weight: 400;
+  font-weight: var(--wLow);
   animation: loadsItems 0.9s linear;
   font-size: 1.3em;
-  font-weight: 400;
   color: var(--secondary);
   line-height: 1.5;
-}
-
-.payload .notice .notice-header .game {
-  width: max-content;
-  display: flex;
-}
-
-.notice .notice-header .game .game-name {
-  font-size: 20px;
-  font-weight: 400;
-  color: var(--primary);
-  min-width: max-content;
 }
 
 .payload .notice .notice-header .posted-by {
   display: block;
   margin: 10px 0;
-  font-weight: 600;
+  font-weight: var(--wMedium);
   text-transform: uppercase;
   font-size: 12px;
   text-decoration: none;
@@ -250,7 +236,7 @@
   display: block;
   user-select: none;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: var(--wMedium);
   width: max-content;
   margin: 10px auto;
 }
@@ -287,12 +273,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  box-shadow: inset 0 -100px 30px -20px rgba(16, 16, 16, .8);
+  box-shadow: inset 0 -100px 30px -20px var(--secondary);
 }
 
 .notices-in-more .news-container-link .news-container .title {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: var(--wStrong);
   position: absolute;
   bottom: 10px;
   left: 0;
@@ -345,7 +331,7 @@
   }
   .payload .notice .notice-header .notice-subtitle {
     font-size: 19px;
-    font-weight: 400;
+    font-weight: var(--wLow);
     margin-top: 20px;
   }
   .notice .notice-header .game img {

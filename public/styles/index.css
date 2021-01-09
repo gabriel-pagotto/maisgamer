@@ -48,7 +48,7 @@
   text-transform: uppercase;
   letter-spacing: 0.03rem;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: var(--wStrong);
   text-decoration: none;
   margin-bottom: 10px;
   text-decoration: none;
@@ -56,7 +56,7 @@
 
 .home .page .header-art .header-title {
   font-size: 28px;
-  font-weight: 800;
+  font-weight: var(--wStrong);
   color: var(--secondary);
   text-transform: capitalize;
   text-decoration: none;
@@ -86,7 +86,7 @@
 
 .home .page .header-art .header-subtitle {
   display: block;
-  font-weight: 500;
+  font-weight: var(--wLow);
   margin-bottom: 10px;
   color: var(--secondary);
 }
@@ -97,7 +97,7 @@
 }
 
 .home .page .header-art .infos .postedBy {
-  font-weight: 600;
+  font-weight: var(--wMedium);
   text-transform: uppercase;
   font-size: 12px;
   text-decoration: none;
@@ -108,6 +108,7 @@
   color: var(--sextenary);
   margin-left: 10px;
   font-size: 12px;
+  font-weight: var(--wMedium);
 }
 
 .home .page .rest-art {
@@ -152,7 +153,7 @@
 
 .home .page .rest-art .infos .rest-title {
   display: block;
-  font-weight: 800;
+  font-weight: var(--wStrong);
   color: var(--secondary);
   text-decoration: none;
   margin-bottom: 10px;
@@ -172,7 +173,7 @@
 }
 
 .home .page .rest-art .infos .postedBy {
-  font-weight: 600;
+  font-weight: var(--wMedium);
   text-transform: uppercase;
   font-size: 12px;
   text-decoration: none;
@@ -194,7 +195,7 @@
   font-size: 18px;
   color: var(--primary);
   text-shadow: 1px 1px 1px var(--quaternary);
-  font-weight: 700;
+  font-weight: var(--wVeryLow);
   align-items: center;
 }
 

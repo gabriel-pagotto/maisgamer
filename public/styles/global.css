@@ -14,6 +14,11 @@
   --facebook: #36589F;
   --twitter: #1A91DA;
   --whatsapp: #25CC63;
+
+  --wVeryLow: 300;
+  --wLow: 400;
+  --wMedium: 500;
+  --wStrong: 700;
 }
 
 body {
@@ -29,8 +34,8 @@ body {
   padding-top: 10px;
 }
 
-body, input, button, textarea, select, option, pre {
-  font-family: Khand;
+body, input, button, textarea, select, option, pre, i {
+  font-family: Roboto;
   -webkit-transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;
   transition: all 0.1s linear;
