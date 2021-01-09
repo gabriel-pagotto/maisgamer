@@ -8,6 +8,9 @@ module.exports = async function (categoryId = null) {
       where: {
         category: categoryId,
       },
+      order: [
+        'created_at',
+      ],
       include: [{
         association: 'user'
       },

@@ -157,4 +157,31 @@ module.exports = {
       moreArticles: moreArticles,
     });
   },
+  all: async function (req, res) {
+    const pageNumber = req.query.page;
+
+    posts = await Post.findAll({
+      order: [
+        'created_at',
+      ],
+      include: [{
+        association: 'user'
+      },
+      {
+        association: 'postCategory'
+      }]
+    });;
+
+    if (pageNumber !== undefined) {
+      return res.json({
+        total: posts.pages.length,
+        pages: posts.pages[parseInt(pageNumber) - 1],
+      });
+    }
+
+    return res.render('pages/allArticles.ejs', {
+      title: 'Mais Gamer - Todos os artigos',
+      posts: posts.reverse(),
+    });
+  },
 }

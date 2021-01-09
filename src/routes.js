@@ -12,6 +12,8 @@ router.get('/strategy-guide', routes.strategyGuide);
 router.get('/trailer', routes.trailer);
 router.get('/e-sports', routes.eSport);
 router.get('/article', routes.article);
+router.get('/articles/all', routes.all);
+
 
 //groups routes//
 router.post('/gaming-groups/add', groupRoutes.addGroup);

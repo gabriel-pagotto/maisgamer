@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <%- include('../components/head') %>
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+
+<body>
+  <style>
+    .article-items {
+      margin: 30px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .article-items .article-item {
+      color: var(--secondary);
+      text-decoration: none;
+      margin: 10px 0;
+      text-align: left;
+    }
+
+    .article-items .article-item:hover {
+      text-decoration: underline;
+      color: var(--primary);
+    }
+  </style>
+  <div class='web'>
+    <%- include('../components/header') %>
+    <div class="payload">
+      <div class="article-items">
+        <% posts.map((post) => { %>
+          <a href="/article?q=<%- post.id %>" class="article-item"><%- post.title %></a>
+        <% }) %>
+      </div>
+    </div>
+    <%- include('../components/footer') %>
+    <script src="/scripts/js/getArticles.js"></script>
+</body>
+
+</html>
