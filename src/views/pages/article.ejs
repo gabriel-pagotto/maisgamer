@@ -42,9 +42,9 @@
         </div>
         <div class="notice-body-container">
           <div class="notice-body">
+            <% let pBefore = false; %>
+            <% let pCounter = 0; %>
             <% for (i = 0;i < article.postContents.length; i++) { %>
-              <% let pBefore = false; %>
-              <% let pCounter = 0; %>
               <% const content = article.postContents[i]; %>
               <% if (content.type === 'IMG') { %>
                 <img src="<%- content.content %>" alt="<%- article.title %>">
@@ -63,7 +63,7 @@
                 <% pBefore = false; %>
               <% } %>
               <% if (content.type === 'P') { %>
-                <% if (pBefore && pCounter === 3) { %>
+                <% if (pBefore && pCounter >= 3) { %>
                   <% pCounter = -1; %>
                   <div class="adsInNotice">
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
