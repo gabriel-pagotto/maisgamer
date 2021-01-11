@@ -100,7 +100,7 @@ window.addEventListener('scroll', () => {
                       data-ad-client="ca-pub-1284323428666859" data-ad-slot="3556740125"></ins>
                   `;
                   const adsPcScript2 = document.createElement('script');
-                  adsPcScript2.src = '/static/javascript/googleAds.js';
+                  adsPcScript2.src = '/static/js/googleAds.js';
                   adsPc.appendChild(adsPcScript2);
                   pageElement.appendChild(adsPc);
                 };
