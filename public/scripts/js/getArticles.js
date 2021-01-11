@@ -38,11 +38,9 @@ window.addEventListener('scroll', () => {
               </div>
               <p class="header-subtitle">${data.header.subtitle}</p>
               <div class="infos">
-                <span class="postedBy"><i style="margin-right: 5px;" 
-                    class="fas fa-user-tag"></i>${data.header.postedBy.name + ' ' + data.header.postedBy.surname}
-                </span>
                 <time datetime="${data.header.createdAt}"><i class="far fa-clock">
-                ${data.header.datePost}</i></time>
+                  ${data.header.datePost}</i>
+                </time>
               </div>
             `;
             pageElement.appendChild(headerArt);
@@ -63,10 +61,9 @@ window.addEventListener('scroll', () => {
                   ${category}
                   <h3 class="rest-title">${element.title}</h3>
                   <p class="rest-subtitle">${element.subtitle}</p>
-                  <span class="postedBy"><i style="margin-right: 5px;" 
-                      class="fas fa-user-tag"></i>${element.postedBy.name + ' ' + element.postedBy.surname}</span>
                   <time datetime="${element.createdAt}"><i class="far fa-clock">
-                    ${element.datePost}</i></time>
+                    ${element.datePost}</i>
+                  </time>
                 </div>
               `;
               animationTime = animationTime + 0.2;

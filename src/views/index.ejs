@@ -22,9 +22,6 @@
             </div>
             <p class="header-subtitle"><%- posts.pages[0].header.subtitle %></p>
             <div class="infos">
-              <span class="postedBy"><i style="margin-right: 5px;"
-                  class="fas fa-user-tag"></i><%- posts.pages[0].header.postedBy.name + ' ' + posts.pages[0].header.postedBy.surname %>
-              </span>
               <time datetime="<%- posts.pages[0].header.createdAt %>"><i class="far fa-clock">
                   <%- posts.pages[0].header.datePost %></i></time>
             </div>
@@ -62,10 +59,8 @@
               <% } %>
               <h3 class="rest-title"><%- post.title %></h3>
               <p class="rest-subtitle"><%- post.subtitle %></p>
-              <span class="postedBy"><i style="margin-right: 5px;"
-                  class="fas fa-user-tag"></i><%- post.postedBy.name + ' ' + post.postedBy.surname %></span>
               <time datetime="<%- post.createdAt %>"><i class="far fa-clock">
-                  <%- post.datePost %></i></time>
+                <%- post.datePost %></i></time>
             </div>
           </a>
           <% } %>
