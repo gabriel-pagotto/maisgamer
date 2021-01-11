@@ -17,6 +17,7 @@ router.get('/articles/all', routes.all);
 
 //groups routes//
 router.post('/gaming-groups/add', groupRoutes.addGroup);
+router.get('/gaming-groups/get-whatsapp-group-informations', groupRoutes.getGroupInformations);
 
 //controllers //
 router.get('/articles', ArticleController.index);

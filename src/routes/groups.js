@@ -1,4 +1,5 @@
 const Groups = require('../models/Groups');
+const getGroupInformations = require('../utilities/getGroupInformations');
 
 module.exports = {
   sendGroup: async function(request, response) {
@@ -25,6 +26,12 @@ module.exports = {
     
     const group = await Groups.create(data); 
     return response.json(group);
+  },
+  getGroupInformations: async function(request, response) {
+    const { link } = request.query;
+    const groupInfomations = await getGroupInformations.whatsapp(link);
+
+    return response.json(groupInfomations);
   },
   groups: async function(request, response) {
     return response.render();
