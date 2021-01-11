@@ -16,7 +16,6 @@ window.addEventListener('scroll', () => {
       page = page + 1;
       const xhr = new XMLHttpRequest;
       xhr.open('get', window.location + `?page=${page}`);
-      console.log(window.location);
       xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {

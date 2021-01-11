@@ -79,7 +79,6 @@ const header = {
 
         searchController.searchResults.style.right = '-100vw';
         searchController.searchBackground.style.visibility = 'hidden';
-        searchController.headerSearch.removeChild(searchController.searchBackground);
       }
     },
   }

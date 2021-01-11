@@ -43,45 +43,53 @@
         <div class="notice-body-container">
           <div class="notice-body">
             <% for (i = 0;i < article.postContents.length; i++) { %>
-            <% let pBefore = false; %>
-            <% let pCounter = 0; %>
-            <% const content = article.postContents[i]; %>
-            <% if (content.type === 'IMG') { %>
-            <img src="<%- content.content %>" alt="<%- article.title %>">
-            <% } %>
-            <% if (content.type === 'T') { %>
-            <h2><%- content.content %></h2>
-            <% } %>
-            <% if (content.type === 'TXT') { %>
-            <pre><%- content.content %></pre>
-            <% } %>
-            <% if (content.type === 'C') { %>
-            <cite><%- content.content %></cite>
-            <% } %>
-            <% if (content.type === 'P') { %>
-            <% if (pBefore && pCounter === 3) { %>
-            <div class="adsInNotice">
-              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-              <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
-                data-ad-format="fluid" data-ad-client="ca-pub-1284323428666859" data-ad-slot="6810601184"></ins>
-              <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-              </script>
-            </div>
-            <% } %>
-            <p><%- content.content %></p>
-            <% } %>
-            <% if (content.type === 'YTB') { %>
-            <% console.log(content.content) %>
-            <iframe class="vYtb" src="https://www.youtube.com/embed/<%- content.content %>" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            </iframe>
-            <% } %>
-            <% if (content.type === 'TWT') { %>
-            <div data-embed-type="tweet" class="tweet">
-              <%- content.content %>
-            </div>
-            <% } %>
+              <% let pBefore = false; %>
+              <% let pCounter = 0; %>
+              <% const content = article.postContents[i]; %>
+              <% if (content.type === 'IMG') { %>
+                <img src="<%- content.content %>" alt="<%- article.title %>">
+                <% pBefore = false; %>
+              <% } %>
+              <% if (content.type === 'T') { %>
+                <h2><%- content.content %></h2>
+                <% pBefore = false; %>
+              <% } %>
+              <% if (content.type === 'TXT') { %>
+                <pre><%- content.content %></pre>
+                <% pBefore = false; %>
+              <% } %>
+              <% if (content.type === 'C') { %>
+                <cite><%- content.content %></cite>
+                <% pBefore = false; %>
+              <% } %>
+              <% if (content.type === 'P') { %>
+                <% if (pBefore && pCounter === 3) { %>
+                  <% pCounter = -1; %>
+                  <div class="adsInNotice">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
+                      data-ad-format="fluid" data-ad-client="ca-pub-1284323428666859" data-ad-slot="6810601184"></ins>
+                    <script>
+                      (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                  </div>
+                <% } %>
+                <% pCounter = pCounter + 1; %>
+                <% pBefore = true; %>
+                <p><%- content.content %></p>
+              <% } %>
+              <% if (content.type === 'YTB') { %>
+                <iframe class="vYtb" src="https://www.youtube.com/embed/<%- content.content %>" frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+                <% pBefore = false; %>
+              <% } %>
+              <% if (content.type === 'TWT') { %>
+                <div data-embed-type="tweet" class="tweet">
+                  <%- content.content %>
+                </div>
+              <% pBefore = false; %>
+              <% } %>
             <% } %>
 
             <% if (article.source_name !== '' && article.source_name != null) { %>
