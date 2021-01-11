@@ -85,7 +85,7 @@ window.addEventListener('scroll', () => {
                   data-ad-client="ca-pub-1284323428666859" data-ad-slot="6148256205"></ins>
                   `;
                   const adsMobileScript2 = document.createElement('script');
-                  adsMobileScript2.src = '/static/javascript/googleAds.js';
+                  adsMobileScript2.src = '/static/js/googleAds.js';
                   adsMobile.appendChild(adsMobileScript2);
                   pageElement.appendChild(adsMobile);
                 } else {
