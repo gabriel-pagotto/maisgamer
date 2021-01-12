@@ -24,21 +24,4 @@ router.get('/articles', ArticleController.index);
 router.get('/search', ArticleController.search);
 router.post('/user', UserController.store);
 
-const Post = require('./models/Post');
-router.get('/set-user-post', async (request, response) => {
-  const posts = await Post.findAll();
-  
-  posts.map((post) => {
-    console.log('Atualizando ' + post.title)
-
-    Post.update({ user_id: 1 }, {
-      where: {
-        id: post.id,
-      },
-    });
-  });
-
-  return response.json(posts);
-})
-
 module.exports = app => app.use(router);
