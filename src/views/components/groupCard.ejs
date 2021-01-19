@@ -1,0 +1,88 @@
+<div class="group-card">
+  <div class="group-card-header">
+    <div class="header-image">
+      <img class="group-icon" src="<%- backgroundImage %>" alt="">
+    </div>
+  </div>
+  <div class="header-name"><%- name %></div>
+  <pre class="group-card-description">
+    <%- description %>
+  </pre>
+  <a href="<%- url %>" target="_blank" class="join">ENTRAR NO GRUPO</a>
+</div>
+
+<style>
+  .group-card {
+    background: var(--tertiary);
+    border: 1px solid var(--quaternary);
+    width: 90%;
+    max-width: 400px;
+    border-radius: 5px;
+    align-self: center;
+    justify-self: center;
+    overflow: hidden;
+  }
+
+  .group-card .group-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .group-card .group-card-header .header-image {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .group-card .header-image img {
+    width: 100%;
+  }
+
+  .group-card .header-name {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary);
+    font-size: 22px;
+    font-weight: var(--wStrong);
+    width: 100%;
+    margin: 10px;
+  }
+
+  .group-card .group-card-description {
+    background: var(--quaternary);
+    padding: 20px 10px;
+    overflow: hidden;
+    min-height: 150px;
+    overflow: hidden;
+    max-height: 150px;
+    white-space: pre-wrap;
+    overflow-y: scroll;
+  }
+
+  .group-card .join {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--wStrong);
+    color: var(--whatsapp);
+    text-decoration: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .group-card .join:hover {
+    opacity: 0.8;
+  }
+</style>

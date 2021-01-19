@@ -1,0 +1,39 @@
+<% const buttonStyle = `
+  color: ${color};
+  border: 2px solid ${color};
+`%>
+
+<button class="buttonsub" id="<%- id %>" style="<%- buttonStyle %>"><i class="<%- icon %>"></i><%- label %></button>
+
+<style>
+  .buttonsub {
+    background: transparent;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: var(--wStrong);
+    font-size: 12px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    align-self: center;
+    justify-self: center;
+    margin: 20px;
+  }
+
+  .buttonsub:hover {
+    opacity: 0.8;
+  cursor: pointer;
+  }
+
+  .buttonsub:active {
+    opacity: 0.6;
+  }
+
+  .buttonsub:focus {
+    outline: none;
+  }
+
+  .buttonsub i {
+    margin-right: 10px;
+  }
+
+</style>

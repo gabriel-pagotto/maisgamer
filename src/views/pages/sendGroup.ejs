@@ -2,22 +2,69 @@
 <html lang="pt-br">
 
 <head>
-  <link rel="stylesheet" href="/styles/article.css">
-  <meta name="description" content="<%- article.subtitle %>" />
-  <meta property="og:description" content="<%- article.subtitle %>">
-  <meta property="og:image" content="<%- article.cover_image %>" />
-  <meta property="twitter:description" content="<%- article.subtitle %>" class="twitter-description" />
-  <meta property="twitter:image" content="<%- article.cover_image %>" />
-  <meta property="article:published_time" content="<%- article.created_at %>">
-  <meta property="article:modified_time" content="<%- article.created_at %>">
-  <%- include('../components/head.ejs') %>
+  <%- include('../components/head.ejs', title="Adicione seu grupo") %>
+  <link rel="stylesheet" href="/styles/sendGroup.css">
+  <meta name="description" content="Adicione seu grupo de WhatsApp sobre jogos em nosso site" />
+  <meta property="og:description" content="Adicione seu grupo de WhatsApp sobre jogos em nosso site">
+  <meta property="twitter:description" content="Adicione seu grupo de WhatsApp sobre jogos em nosso site" />
 </head>
 
 <body>
   <div class='web'>
     <%- include('../components/header') %>
     <div class="payload">
-      
+
+      <div class="groups-infos">
+        <p>- Adicione o link abaixo e de uma descrição para seu grupo.</p>
+        <p>- Ao clicar em buscar (dados do grupo) iremos procurar os dados do seu grupo automaticamente.</p>
+        <p>- Aceitaremos somente grupos sobre games online, grupos de outros nichos não serão aceitos.</p>
+        <p>- Nome e imagem do grupo serão atualizados automaticamente todos os dias pelo site.</p>
+      </div>
+
+      <div class="group-search">
+        <form action="" class="search-group">
+          <input required class="search-data" type="url" placeholder="chat.whatsapp.com...">
+          <textarea required minlength="16" maxlength="256" placeholder="Escreva uma descrição para o grupo" class="set-description"></textarea>
+          <div class="search-error">
+            <span class="search-error-show"></span>
+          </div>
+          <button class="search-group-submit"><i class="fas fa-search"></i>Buscar dados do grupo</button>
+        </form>
+      </div>
+
+      <div class="search-loader" style="display: none;"><%- include('../components/loader') %></div>
+
+      <div class="group-finded">
+        <%- include('../components/groupCard',
+          name="",
+          description="",
+          backgroundImage="",  
+        ) %>
+      </div>
+
+      <button class="send-group-submit"><i class="fas fa-share"></i>Enviar grupo</button>
+
+      <div class="group-added">
+        <i class="fas fa-check-circle"></i>
+        <span>Seu grupo foi adicionado!</span>
+      </div>
+
+      <div class="completed-options">
+        <%- include('../components/button',
+          icon="fas fa-redo-alt",
+          label="Adicionar outro grupo",
+          id="add-another-group",
+          color="var(--secondary)"
+        ) %>
+        <%- include('../components/button',
+          icon="fas fa-eye",
+          label="Ver grupo",
+          id="see-group",
+          color="var(--whatsapp)"
+        ) %>
+      </div>
+
+      <script src="/scripts/js/sendGroup.js"></script>
     </div>
     <%- include('../components/footer') %>
 </body>

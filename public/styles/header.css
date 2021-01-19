@@ -100,6 +100,10 @@ header .header-body .ph-items ul li {
   color: var(--primary);
 }
 
+.header-body .ph-items ul li .ph-item-add i {
+  margin-right: 10px;
+}
+
 header .header-body .header-search {
   min-width: 80px;
   margin: 0 15px 0 5px;

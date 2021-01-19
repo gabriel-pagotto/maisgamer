@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <%- include('../components/head.ejs', title="Grupos de " + groups.plataform + " para gamers") %>
+  <link rel="stylesheet" href="/styles/sendGroup.css">
+  <meta name="description" content="Grupos para gamers de WhatsApp." />
+  <meta property="og:description" content="Grupos para gamers de WhatsApp.">
+  <meta property="twitter:description" content="Grupos para gamers de WhatsApp." />
+</head>
+
+<body>
+  <div class='web'>
+    <%- include('../components/header') %>
+    <div class="payload">
+      <div class="groups">
+        <% groups.currentPage.map((group) => { %>
+          <div class="group-container">
+            <%- include('../components/groupCard',
+              name=group.name,
+              description=group.description,
+              backgroundImage=group.icon,
+              url=group.url,
+            ) %>
+          </div>
+        <% }) %>
+      </div>
+      <style>
+        .payload {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .payload .groups {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .payload .groups .group-container {
+          margin-bottom: 20px;
+        }
+      </style>
+    </div>
+    <%- include('../components/footer') %>
+</body>
+
+</html>
